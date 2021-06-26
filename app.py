@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 model = pickle.load(open('loan_status.pkl', 'rb'))  # opening pickle file in read mode
-app = Flask(__name__)  # initializing Flask app
+app = Flask(__name__) # initializing Flask app
 @app.route("/")
 def hello():
     return render_template('index.html')
